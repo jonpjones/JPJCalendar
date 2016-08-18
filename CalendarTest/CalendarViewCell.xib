@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CalendarTest" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarViewCell" id="9q9-GP-4Hz" customClass="CalendarViewCell" customModule="CalendarTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="343"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="343"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luj-7b-cYe">
+                        <rect key="frame" x="31" y="3" width="338" height="338"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-rL-gyS">
+                                <rect key="frame" x="6" y="6" width="326" height="326"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6hf-rL-gyS" firstAttribute="centerX" secondItem="Luj-7b-cYe" secondAttribute="centerX" id="XYl-lL-zOI"/>
+                            <constraint firstItem="6hf-rL-gyS" firstAttribute="height" secondItem="Luj-7b-cYe" secondAttribute="height" constant="-12" id="eJq-Ow-ggv"/>
+                            <constraint firstItem="6hf-rL-gyS" firstAttribute="centerY" secondItem="Luj-7b-cYe" secondAttribute="centerY" id="lHO-4k-ucm"/>
+                            <constraint firstItem="6hf-rL-gyS" firstAttribute="width" secondItem="Luj-7b-cYe" secondAttribute="width" constant="-12" id="zg5-sg-OHC"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM1-xs-xbI">
+                        <rect key="frame" x="5" y="5" width="391" height="333"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="centerX" secondItem="9q9-GP-4Hz" secondAttribute="centerX" id="0Mx-NT-g76"/>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="height" relation="lessThanOrEqual" secondItem="9q9-GP-4Hz" secondAttribute="width" constant="-5" id="36I-Aa-wdW"/>
+                <constraint firstItem="dM1-xs-xbI" firstAttribute="top" secondItem="9q9-GP-4Hz" secondAttribute="top" constant="5" id="6DR-tX-0JU"/>
+                <constraint firstAttribute="bottom" secondItem="dM1-xs-xbI" secondAttribute="bottom" constant="5" id="7XX-bW-ISd"/>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="height" secondItem="9q9-GP-4Hz" secondAttribute="height" priority="750" constant="-5" id="Fbm-mT-9qM"/>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="width" secondItem="9q9-GP-4Hz" secondAttribute="height" priority="750" constant="-5" id="bEZ-ni-b5M"/>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="width" relation="lessThanOrEqual" secondItem="9q9-GP-4Hz" secondAttribute="width" constant="-5" id="gBp-3T-b0C"/>
+                <constraint firstItem="Luj-7b-cYe" firstAttribute="centerY" secondItem="9q9-GP-4Hz" secondAttribute="centerY" id="iid-Ro-vIM"/>
+                <constraint firstAttribute="trailing" secondItem="dM1-xs-xbI" secondAttribute="trailing" constant="5" id="m73-eu-7Th"/>
+                <constraint firstItem="dM1-xs-xbI" firstAttribute="leading" secondItem="9q9-GP-4Hz" secondAttribute="leading" constant="5" id="qMx-WY-2xM"/>
+            </constraints>
+            <size key="customSize" width="401" height="343"/>
+            <connections>
+                <outlet property="circleView" destination="6hf-rL-gyS" id="aSC-9I-1AJ"/>
+                <outlet property="dayTextLabel" destination="dM1-xs-xbI" id="ZWW-S9-klV"/>
+                <outlet property="outlineView" destination="Luj-7b-cYe" id="EWc-co-r6a"/>
+            </connections>
+            <point key="canvasLocation" x="265.5" y="177.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

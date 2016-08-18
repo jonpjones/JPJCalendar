@@ -9,17 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var calendarView: CalendarView!
+    
+    var dateArray = ["August 5, 2016", "August 9, 2016", "August 1, 2016", "July 27, 2016"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .LongStyle
+        let date = formatter.dateFromString("August 5, 2016")
+        calendarView.delegate = self
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController: CalendarDelegate {
+    func shouldShowSecondaryViewForDays(date: BDate) -> Bool {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .LongStyle
+        for string in dateArray {
+            let ndate = formatter.dateFromString(string)
+            let bdate = BDate(withDate: ndate!)
+            
+            if date.convertedDate() == bdate.convertedDate() {
+                return true
+            }
+        }
+        return false
     }
-
-
 }
 
